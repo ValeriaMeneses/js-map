@@ -27,25 +27,22 @@ var listOfCars = [
 // (a) make the .map function work
 
 var listOfCarObjects = listOfCars.map(function(element){
-  var make = element.split(' ')[0]
-  var model = element.split(' ')[1]
   return {
-      make: make,
-      model: model
+      make: element.split(' ')[0],
+      model: element.split(' ')[1]
     }
 })
 // console.log(listOfCarObjects);
 
 // (b) you code for part-b below...
-var carsContainer = document.querySelector(".cars-container")
-
 var printDom = listOfCarObjects.map(function (element) {
   // console.log(element.model);
   return`
   <span>${element.model}</span>`
 }).join('')
 
-carsContainer.innerHTML = printDom
+document.querySelector(".cars-container").innerHTML = printDom
+
 
 
 

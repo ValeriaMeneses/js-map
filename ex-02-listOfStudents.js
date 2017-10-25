@@ -52,7 +52,6 @@ var studentAgesList = listOfStudents.map(function (element) {
 // ////////////////////////////////////////////////////////////////////
 // 2
 var listOfStudentsPlusEmail = listOfStudents.map(function (element) {
-
   var email = element.first.toLowerCase()[0] + element.last.toLowerCase() + '@happygroup.com'
   element["email"] = email
   return element
